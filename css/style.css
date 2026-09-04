@@ -5,12 +5,12 @@
    ========================================================================== */
 
 :root {
-  --bg-top: #17140f;
-  --bg-bottom: #060605;
-  --panel: #141210;
-  --ink: #f2ede2;
-  --muted: #9c9184;
-  --line: #2b2721;
+  --bg-top: #1c1c1c;
+  --bg-bottom: #030303;
+  --panel: #161616;
+  --ink: #f4f4f2;
+  --muted: #9a9a9a;
+  --line: #2a2a2a;
   --accent: #ffffff;
   --accent-soft: rgba(255, 255, 255, 0.06);
   --shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
@@ -43,7 +43,7 @@ img { display: block; max-width: 100%; }
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(15, 13, 10, 0.85);
+  background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
@@ -103,7 +103,7 @@ img { display: block; max-width: 100%; }
 
 .button-primary {
   background: var(--accent);
-  color: #14110a;
+  color: #0a0a0a;
   border-color: var(--accent);
 }
 
