@@ -200,6 +200,53 @@ h2 {
   margin: 0;
 }
 
+/* ---------- Option cards (link grids: home page, writings page) ---------- */
+
+.option-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.option-card {
+  display: block;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  transition: 160ms ease;
+}
+
+.option-card:hover {
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.option-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.option-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+}
+
 /* ---------- About section ---------- */
 
 .about-section {
@@ -508,6 +555,10 @@ footer {
   }
 
   .video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .option-grid {
     grid-template-columns: 1fr;
   }
 }

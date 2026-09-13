@@ -5,15 +5,18 @@ no compiling. Open a file, edit the text, save, refresh your browser.
 
 ## Pages
 
-- `index.html` — Home: just the name, the tagline, and a video placeholder.
+- `index.html` — Home: the name, the tagline, and three link cards (Podcast,
+  Videos, Writings).
 - `podcast.html` — The Die Well Podcast: cover art, description, platform
   links, and every episode with a playable audio player, pulled from your
   RSS feed.
 - `videos.html` — Your YouTube channel: a subscribe button and a live embed
   of your latest uploads (updates itself automatically — no editing needed
   when you post a new video).
-- `about.html` — The mission/About text, plus a Founders section with a photo
-  placeholder and bio for each of Kaydon, Luis, and Pierce.
+- `writings.html` — Blog, Books, and Devotionals link cards. Blog links out
+  to your Substack; Books and Devotionals are "Coming Soon" placeholders.
+- `about.html` — The mission text, plus a Founders section with a photo and
+  bio for each of Kaydon, Luis, and Pierce.
 - `css/style.css` — **One shared stylesheet.** Dark, monochrome (black/white/
   gray, no color accent), Playfair Display for headings. Change it once here
   and every page updates.
@@ -25,25 +28,21 @@ browser.
 
 ## Common edits
 
-**Edit the homepage tagline**
-Open `index.html`, look for `.home-hero`.
+**Edit the homepage tagline or link cards**
+Open `index.html`. The name and tagline are in `.home-hero`; the three link
+cards (Podcast, Videos, Writings) are in the `.option-grid`.
 
-**Edit the About text or founder bios**
+**Edit the mission text or founder bios**
 Open `about.html`. The mission text is in `.about-section`; the founder cards
 are in the `.founders` grid. For each founder, swap the `.founder-photo` div
 for a real headshot once you have one, e.g.:
 `<img src="images/kaydon.jpg" alt="Kaydon">`, and replace "Bio coming soon."
 with their real bio.
 
-**Add the homepage video**
-Open `index.html`, find the `.video-placeholder` block, and replace it with a
-real embed — for a YouTube video that looks like:
-```html
-<div class="video-embed">
-  <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
-</div>
-```
-(swap `.video-placeholder` for `.video-embed` — see `videos.html` for a working example)
+**Add a book, devotional, or update the blog link**
+Open `writings.html`, find the `.option-grid`. Remove the
+`<span class="badge">Coming Soon</span>` line once a Book or Devotional is
+ready, and point its `href` at the real link.
 
 **Add a new podcast episode**
 Open `podcast.html`, find the `<!-- EPISODES -->` comment, copy one
