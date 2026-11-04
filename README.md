@@ -5,40 +5,32 @@ no compiling. Open a file, edit the text, save, refresh your browser.
 
 ## Pages
 
-- `index.html` — Home: a full-screen hero (name, tagline, light rays, rising
-  points of light, and a scrolling motto strip).
+- `index.html` — Home: just the name and the tagline.
 - `podcast.html` — The Die Well Podcast: cover art, description, platform
   links, and every episode with a playable audio player, pulled from your
   RSS feed.
-- `about.html` — Revelation 14:13 and the mission statement, plus a Founders
-  section with a photo and bio for each of Kaydon, Luis, and Pierce.
+- `about.html` — The mission text, plus a Founders section with a photo and
+  bio for each of Kaydon, Luis, and Pierce.
 - `css/style.css` — **One shared stylesheet.** Dark, monochrome (black/white/
   gray, no color accent), Playfair Display for headings. Change it once here
   and every page updates.
-- `js/site.js` — A small script for the motion (scroll fade-ins, the cursor
-  glow, rising lights, the scroll progress line). It's decoration only: if it
-  ever failed to load, the site would still work. It also respects visitors'
-  "reduce motion" setting.
 
 ## How to preview the site
 
-Double-click `index.html` and it opens in your browser. (The fonts and
-podcast audio load from the internet, so you need to be online.)
+You don't need a server. Just double-click `index.html` and it opens in your
+browser.
 
 ## Common edits
 
-**Edit the homepage tagline or the motto strip**
-Open `index.html`. The name and tagline are in `.hero-center`. The scrolling
-phrases are in `.marquee`: edit the words, and keep the groups identical so the
-loop stays seamless.
+**Edit the homepage tagline**
+Open `index.html`, look for `.home-hero`.
 
-**Edit the verse, mission, or founder bios**
-Open `about.html`. The verse is in `.verse` and the mission is in `.mission`.
-The founder cards are in the `.founders` grid. For each founder, swap the
-`.founder-photo` div for a real headshot once you have one, e.g.:
-`<img src="images/luis.png" alt="Luis Huazano">`, and replace "Bio coming
-soon." with their real bio. (Headshots show in black and white and turn to
-color when hovered.)
+**Edit the mission text or founder bios**
+Open `about.html`. The mission text is in `.about-section`; the founder cards
+are in the `.founders` grid. For each founder, swap the `.founder-photo` div
+for a real headshot once you have one, e.g.:
+`<img src="images/kaydon.jpg" alt="Kaydon">`, and replace "Bio coming soon."
+with their real bio.
 
 **Add a new podcast episode**
 Open `podcast.html`, find the `<!-- EPISODES -->` comment, copy one
@@ -59,6 +51,8 @@ Open `css/style.css`, edit the values at the top under `:root { ... }`:
 
 **Update links**
 - Apple Podcasts / Spotify / RSS — in the `.platforms` block near the top of `podcast.html`
+- The "Click here" link in the About section's second paragraph on `about.html`
+  is a placeholder (`href="#"`) — point it at your YouTube video once it's made.
 
 ## Notes
 
