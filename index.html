@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#030303" />
   <title>Die Well Media</title>
   <meta
     name="description"
@@ -13,6 +14,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" type="image/png" href="images/logo.png">
+  <script>
+    document.documentElement.classList.add('js');
+    setTimeout(function () {
+      if (!window.__dw) document.documentElement.classList.add('reveal-all');
+    }, 2500);
+  </script>
+  <script src="js/site.js" defer></script>
 </head>
 <body>
   <nav class="nav">
@@ -31,9 +39,31 @@
 
   <main>
     <section class="home-hero">
-      <div class="container">
-        <h1>Die Well Media</h1>
+      <div class="hero-rays" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-particles" aria-hidden="true"></div>
+
+      <div class="hero-center">
+        <h1>
+          <span class="h1-big">Die Well</span>
+          <span class="h1-small">Media</span>
+        </h1>
+        <span class="hero-rule" aria-hidden="true"></span>
         <p class="tagline">Helping men of God go all-in on eternity.</p>
+      </div>
+
+      <!-- Scrolling motto strip. Edit the phrases here; keep the two groups identical. -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span>All-in on eternity</span><span>Press on</span><span>Burn the boats</span><span>Live faithfully</span><span>Finish strong</span><span>Die well</span><span>Soli Deo Gloria</span>
+            <span>All-in on eternity</span><span>Press on</span><span>Burn the boats</span><span>Live faithfully</span><span>Finish strong</span><span>Die well</span><span>Soli Deo Gloria</span>
+          </div>
+          <div class="marquee-group">
+            <span>All-in on eternity</span><span>Press on</span><span>Burn the boats</span><span>Live faithfully</span><span>Finish strong</span><span>Die well</span><span>Soli Deo Gloria</span>
+            <span>All-in on eternity</span><span>Press on</span><span>Burn the boats</span><span>Live faithfully</span><span>Finish strong</span><span>Die well</span><span>Soli Deo Gloria</span>
+          </div>
+        </div>
       </div>
     </section>
   </main>
