@@ -180,18 +180,6 @@ h1, .brand {
   transform: rotate(45deg);
 }
 
-/* a small cross, drawn in CSS */
-.cross {
-  display: block;
-  width: 16px;
-  height: 28px;
-  margin: 0 auto 1.8rem;
-  background:
-    linear-gradient(var(--crimson), var(--crimson)) center / 2px 100% no-repeat,
-    linear-gradient(var(--crimson), var(--crimson)) center 30% / 100% 2px no-repeat;
-  filter: drop-shadow(0 0 8px rgba(179, 41, 59, 0.55));
-}
-
 .section-title {
   display: flex;
   align-items: center;
@@ -309,8 +297,6 @@ h1, .brand {
     linear-gradient(var(--c), var(--c)) 100% 100% / 28px 1px no-repeat,
     linear-gradient(var(--c), var(--c)) 100% 100% / 1px 28px no-repeat;
 }
-
-.plate .cross { animation: fadeIn 1.6s ease 0.1s both; }
 
 .home-hero h1 { margin: 0; line-height: 1; }
 
