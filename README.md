@@ -5,15 +5,17 @@ no compiling. Open a file, edit the text, save, refresh your browser.
 
 ## Pages
 
-- `index.html` — Home: just the name and the tagline.
+- `index.html` — Home: a framed "title page" with the name, the tagline, and
+  Revelation 14:13.
 - `podcast.html` — The Die Well Podcast: cover art, description, platform
   links, and every episode with a playable audio player, pulled from your
   RSS feed.
 - `about.html` — The mission text, plus a Founders section with a photo and
   bio for each of Kaydon, Luis, and Pierce.
-- `css/style.css` — **One shared stylesheet.** Dark, monochrome (black/white/
-  gray, no color accent), Playfair Display for headings. Change it once here
-  and every page updates.
+- `css/style.css` — **One shared stylesheet.** An engraved, old-world look:
+  Cinzel (Roman inscription capitals) for headings, EB Garamond for text,
+  double-line frames, black and bone-white with one deep-crimson accent.
+  Change it once here and every page updates. There is no JavaScript.
 
 ## How to preview the site
 
@@ -22,8 +24,9 @@ browser.
 
 ## Common edits
 
-**Edit the homepage tagline**
-Open `index.html`, look for `.home-hero`.
+**Edit the homepage tagline or verse**
+Open `index.html`. The name and tagline are in `.plate`; the verse is in
+`.verse` right below the tagline.
 
 **Edit the mission text or founder bios**
 Open `about.html`. The mission text is in `.about-section`; the founder cards
@@ -44,10 +47,13 @@ update:
 
 **Change colors or fonts**
 Open `css/style.css`, edit the values at the top under `:root { ... }`:
-- `--bg-top` / `--bg-bottom` — the background gradient (top to bottom)
-- `--panel` — episode card background
-- `--ink` — main text color
-- `--accent` — highlight color for buttons and links (currently white)
+- `--bg` — page background
+- `--ink` — main text color (bone-white)
+- `--muted` — softer gray text
+- `--crimson` / `--crimson-text` — the accent: the cross, corner brackets,
+  the illuminated first letter. Set both to white or gray for a strictly
+  black-and-white look.
+- `--display` / `--body` — the two fonts (headings and text)
 
 **Update links**
 - Apple Podcasts / Spotify / RSS — in the `.platforms` block near the top of `podcast.html`
